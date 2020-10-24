@@ -1,11 +1,16 @@
 import React from 'react';
+import '../../App.css';
 
 interface DayCellProps {
-  monthIndex: number;
+  dayIndex: number;
 }
 
 const DayCell = (props: DayCellProps) => {
-  return <div />;
+  return (
+    <div className="dayCell">
+      <div className="dayCellNumber">{props.dayIndex}</div>
+    </div>
+  );
 };
 
 export default DayCell;
