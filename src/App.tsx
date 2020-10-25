@@ -10,7 +10,12 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>EZR+D</p>
       </header>
-      <DayCell dayIndex={23} />
+      <div className="rowDiv">
+        <DayCell dayIndex={23} />
+        <DayCell dayIndex={24} />
+        <DayCell dayIndex={25} />
+        <DayCell dayIndex={26} />
+      </div>
     </div>
   );
 }
