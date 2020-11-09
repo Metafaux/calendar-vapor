@@ -11,10 +11,10 @@ function App() {
         <p>EZR+D</p>
       </header>
       <div className="rowDiv">
-        <DayCell dayIndex={23} />
-        <DayCell dayIndex={24} />
-        <DayCell dayIndex={25} />
-        <DayCell dayIndex={26} />
+        <DayCell dayIndex={23} inProp={true} />
+        <DayCell dayIndex={24} inProp={true} />
+        <DayCell dayIndex={25} inProp={true} />
+        <DayCell dayIndex={26} inProp={true} />
       </div>
     </div>
   );
