@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, memo } from 'react';
+import './confirm.css';
 
 interface ConfirmProps {
   open: boolean;
@@ -12,15 +13,17 @@ interface ConfirmProps {
 
 // https://github.com/carlrip/LearnReact17WithTypeScript/blob/master/03-GettingStartedWithReactAndTypeScript/02-ConfirmComponent/src/Confirm.tsx
 
+// https://codersera.com/blog/react-hooks-with-typescript-usecallback-usememo/
+
 const Confirm = (props: ConfirmProps) => {
   const [cancelClickCount, setCancelClickCount] = useState(0);
 
-  console.log('Confirm rendering');
+  console.log('Confirm.tsx rendering');
 
   useEffect(() => {
-    console.log('Confirm first rendering');
+    console.log('Confirm.tsx FIRST rendering');
     return () => {
-      console.log('Confirm unmounted');
+      console.log('Confirm.tsx unmounted');
     };
   }, []);
 
@@ -62,4 +65,6 @@ const Confirm = (props: ConfirmProps) => {
   );
 };
 
-export default Confirm;
+const ConfirmMemo = memo(Confirm);
+
+export default ConfirmMemo;
